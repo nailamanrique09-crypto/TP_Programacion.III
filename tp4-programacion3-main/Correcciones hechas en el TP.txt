@@ -1,0 +1,16 @@
+Correcciones hechas en el TP
+
+	Clase Main
+se reorganizó para que solo cumpla la función de punto de entrada del programa y de prueba de la aplicación. Ahora crea las instancias necesarias, inicializa los datos y ejecuta los métodos principales del sistema, evitando concentrar lógica de negocio dentro del main.
+
+	Clase Transaction
+Se definieron los atributos principales de la transacción, se encapsularon correctamente, y se agregaron los métodos de acceso (getters).
+También se mejoró el uso de tipos adecuados, como LocalDate para la fecha y TransactionType para el tipo de transacción.
+
+	Clase TransactionProcessor
+Fue dividida porque concentraba demasiadas responsabilidades: carga de datos, almacenamiento y lógica de procesamiento. Se le añadieron y corrigieron los métodos solicitados para búsqueda, ordenamiento, filtrado, conteo e impresión de transacciones.
+
+Así TransactionProcessor solo quedó encargado únicamente de la lógica de procesamiento, como búsquedas, filtros, ordenamientos y cálculos.
+TransactionType: una clase enum para definir los tipos de transacción posibles, evitando el uso de cadenas de texto fijas.
+TransactionGenerator: es una clase para cargar los datos iniciales, y generar transacciones aleatorias.
+TransactionStore: guardar en listas los movimientos para poder operar con ellos.
